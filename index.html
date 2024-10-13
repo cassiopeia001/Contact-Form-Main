@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+  
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+
+  <section class="wrapper">
+
+    <h1>Contact Us</h1>
+    <form id="myform" novalidate>
+
+      <fieldset>
+
+        <div class="input-container" role="group">
+          
+          <label for="fname">First Name <p>*</p></label>
+          <input id="fname" name="firstname" type="text" autocomplete="given-name" aria-invalid="false" aria-describedby="fname-error" required>
+          <span class="error-message" id="fname-error">This field is required</span>
+        </div>
+
+        <div class="input-container" role="group">
+
+          <label for="">Last Name <p>*</p></label>
+          <input id="lname" name="lastname" type="text" autocomplete="family-name" aria-invalid="false" aria-describedby="lname-error" required>
+          <span id="lname-error" class="error-message">This field is required</span>
+        </div>
+      </fieldset>
+
+      <div class="input-container" role="group">
+
+        <label for="email">Email Adress <p>*</p></label>
+        <input id="email" name="email" type="email" autocomplete="email" aria-invalid="false" aria-describedby="email-error" required>
+        <span id="email-error" class="error-message">Please enter a valid email address</span>
+      </div>
+
+      <fieldset class="query-type-container">
+
+        <legend>Query Type <p>*</p></legend>
+        
+        <div class="radio-buttons">
+          
+          <div class="buttons" role="button">
+
+            <input name="query-type" id="general-enquiry" type="radio" value="General Enquiry" aria-invalid="false" aria-describedby="query-error">
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+
+          <div class="buttons" role="button">
+
+            <input name="query-type" id="support-request" type="radio" value="Support Request" aria-invalid="false" aria-describedby="query-error">
+            <label for="support-request">Support Request</label>
+          </div>
+        </div>
+        
+
+        <span id="query-error" class="error-message">Please select a query type</span>
+      </fieldset>
+      <div class="input-container" role="group">
+
+        <label for="message">Message <p>*</p></label>
+        <textarea id="message" name="message" aria-invalid="false" aria-describedby="message-error" required></textarea>
+        <span id="message-error" class="error-message">This field is required</span>
+      </div> 
+
+      <div class="check-container" role="group">
+
+        <input type="checkbox" name="check-consent" id="check-consent" aria-invalid="false" aria-describedby="consent-error" required> 
+        <label for="check-consent">I consent to being contacted by the team <p>*</p></label>
+        
+      </div>
+      <span id="consent-error" class="error-message">To submit this form, please consent to being contacted</span>
+
+      <button id="submit-button" class="submit-button">Submit</button>
+    </form>
+  </section>
+  
+  <div class="pop-up" role="alert" aria-live="polite">
+    <div class="success">
+      <img src="assets/images/icon-success-check.svg">
+      <p><b>Message Sent!</b></p>
+    </div>
+    <p class="thanks-msg">Thanks for completing the form. We'll be in touch soon!</p>  
+  </div>
+
+</body>
+</html>
